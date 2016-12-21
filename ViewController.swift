@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textOne: UITextField!
     @IBOutlet weak var textTwo: UITextField!
     @IBAction func buttonTapped(_ sender: Any) {
-        print(textOne.text!)
-        print(textTwo.text!)
+        coolLabel.text = " Answer \(Double(textOne.text!)! + Double(textTwo.text!)!)"
     }
     
     @IBAction func buttonReset(_ sender: Any) {
