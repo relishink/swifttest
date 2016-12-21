@@ -17,21 +17,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var textOne: UITextField!
     @IBOutlet weak var textTwo: UITextField!
     @IBAction func buttonTapped(_ sender: Any) {
-        coolLabel.text = " Answer \(Double(textOne.text!)! + Double(textTwo.text!)!)"
-    }
-    
-    @IBAction func buttonReset(_ sender: Any) {
-        coolLabel.text = "Yippeeee!"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        let addition = true
+        
+        if addition {
+            coolLabel.text = "Answer \(Double(textOne.text!)! + Double(textTwo.text!)!)"
+        } else {
+            coolLabel.text = "Answer \(Double(textOne.text!)! - Double(textTwo.text!)!)"
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        
+        @IBAction func buttonReset(_ sender: Any) {
+            coolLabel.text = "Yippeeee!"
+        }
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view, typically from a nib.
+            
+        }
+        
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
 }
